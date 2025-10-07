@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonardo Café ☕</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>☕ Leonardo Café</h1>
+    <p class="subtext">"Leonardo DiCaprio pernah pesan kopi di sini."</p>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('pesan')">Pesan</a>
+      <a href="#" onclick="showPage('riwayat')">Riwayat</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- Halaman Home -->
+    <section id="home" class="page active">
+      <img src="https://i.ibb.co/4fDgMJ0/coffee-cup.png" alt="kopi" class="coffee-img">
+      <h2>Selamat Datang di Leonardo Café ☕</h2>
+      <p>
+        Nikmati cita rasa kopi premium yang disukai para bintang dunia.  
+        Setiap tegukan, sebuah kisah klasik lahir.
+      </p>
+    </section>
+
+    <!-- Halaman Pesan -->
+    <section id="pesan" class="page">
+      <h2>🛍️ Buat Pesanan</h2>
+      <img src="https://i.ibb.co/4fDgMJ0/coffee-cup.png" alt="kopi" class="coffee-img-small">
+      <div class="form">
+        <input type="text" id="nama" placeholder="Nama Pemesan">
+        <select id="menu">
+          <option value="">Pilih Menu</option>
+          <option value="Kopi Hitam">Kopi Hitam - Rp15.000</option>
+          <option value="Cappuccino">Cappuccino - Rp20.000</option>
+          <option value="Latte">Latte - Rp22.000</option>
+          <option value="Mocca">Mocca - Rp25.000</option>
+        </select>
+        <input type="number" id="jumlah" placeholder="Jumlah" min="1">
+        <button onclick="tambahPesanan()">Tambah</button>
+      </div>
+
+      <h3>Pesanan Saat Ini</h3>
+      <ul id="daftarPesanan"></ul>
+      <h4 id="totalHarga"></h4>
+    </section>
+
+    <!-- Halaman Riwayat -->
+    <section id="riwayat" class="page">
+      <h2>📜 Riwayat Pesanan</h2>
+      <ul id="riwayatList"></ul>
+      <button onclick="hapusRiwayat()">Hapus Riwayat</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Leonardo Café | Inspired by Leonardo DiCaprio | Rasya Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
